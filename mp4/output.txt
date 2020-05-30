@@ -1,0 +1,2 @@
+clang++ -std=c++1y -stdlib=libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c FloodFilledImage.cpp -o FloodFilledImage.o
+clang++ -std=c++1y -stdlib=libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c FloodFilledImage.cpp -o FloodFilledImage.o

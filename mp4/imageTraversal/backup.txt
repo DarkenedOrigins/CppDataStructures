@@ -1,0 +1,29 @@
+//this is inside the constructor for 
+HSLAPixel* startPixel = png.getPixel(start.x,start.y);
+	int x = start.x;
+	int y = start.y;
+	Point InsertPoint(x,y);
+	DFSset.emplace(InsertPoint);
+	while(true){
+		if( (x+1<(int)png.width()) && (ImageTraversal::calculateDelta(*(png.getPixel(x+1,y)),*startPixel) < tolerance) ){
+			InsertPoint.x++;
+			DFSset.emplace_hint(DFSset.end(),InsertPoint);
+			continue;
+		}
+		else if( (y+1<(int)png.height() )&& (ImageTraversal::calculateDelta(*(png.getPixel(x,y+1)),*startPixel) < tolerance) ){
+			InsertPoint.y++;
+			DFSset.emplace_hint(DFSset.end(),InsertPoint);
+			continue;
+		}
+		else if( (x-1>=0) && (ImageTraversal::calculateDelta(*(png.getPixel(x-1,y)),*startPixel) < tolerance)){
+			InsertPoint.x--;
+			DFSset.emplace_hint(DFSset.end(),InsertPoint);
+			continue;
+		}
+		else if( (y-1 >=0) && (ImageTraversal::calculateDelta(*(png.getPixel(x,y-1)),*startPixel) < tolerance)){
+			InsertPoint.y--;
+			DFSset.emplace_hint(DFSset.end(),InsertPoint);
+			continue;
+		}
+		break;
+	}

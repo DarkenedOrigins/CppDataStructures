@@ -1,0 +1,4 @@
+Height balance of n1: 2
+Height balance of n2: 2
+Height balance of n3: 2
+Height balance of n4: 2

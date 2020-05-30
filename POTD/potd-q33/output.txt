@@ -1,0 +1,11 @@
+Before deleting a leaf: 
+2 5 7 9 10 12 14 
+After deleting a leaf: 
+2 5 7 9 10 12 
+Before deleting a node with 1 child: 
+2 5 7 9 10 12 
+After deleting a node with 1 child: 
+2 5 7 9 10 
+Before deleting a node with 2 child: 
+2 5 7 9 10 
+After deleting a node with 2 child: 
